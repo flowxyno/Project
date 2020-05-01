@@ -1,0 +1,63 @@
+
+@charset "utf-8";
+
+
+
+
+/*
+   CIS 155 - Web Dev 1 - Quarter Project - V1 Style Sheet
+   Author: Tracy Harvey
+   Date:  04/29/20
+   
+   Filename: styles.css
+
+*/
+
+*/ Structural Styles */
+html {
+    background-color: black;
+}
+header {
+    background-color: rgb(102, 0, 0);
+    color: hsl(58, 31%, 84%);
+}
+body {
+    background-color: hsl(58, 31%, 84%);
+}
+footer {
+    background-color: rgb(102, 0, 0);
+    color: hsl(58, 31%, 84%);
+}
+
+*/ Navigation Styles */
+nav {
+    display: table;
+    width: 100%;
+}
+nav > ul {
+    display: table-row;
+}
+nav > ul > li {
+    display: table-cell;
+    text-align: center;
+}
+nav a {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+nav a:link, nav:visited {
+    color: black;
+    text-decoration: none;
+}
+nav a:hover, nav a:active {
+    color: hsl(58, 31%, 84%);
+    background-color: rgb(102, 0, 0);
+}
+
+
+*/ sec styles */
+
+
+
+
+*/ Definition List Styles */
