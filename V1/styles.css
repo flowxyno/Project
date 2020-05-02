@@ -19,10 +19,9 @@
      https://rgbcolorcode.com/color/660000
 */
 
-*/ Structural Styles */
+/* Structural Styles */
 html {
-    background-color: black;
-    
+    background-color: black; 
 }
 /* M2LO15 Apply colors using CSS (CSS, see 2-5 Working with Color in CSS) : there are many examples
    of applying colors using CSS in this document.
@@ -65,7 +64,7 @@ a[href] {
     font-style: italic;
 }
 
-*/ Navigation Styles */
+/* Navigation Styles */
 /* M2LO12 Demonstrate how CSS can change presentation of page elements 
    (CSS, these are styles that impact page elements rather than impacting text on the page) :
    Forces the Nav section to display as a table instead of the default, which on chrome was an unordered list
@@ -103,7 +102,7 @@ nav a:hover, nav a:active {
 }
 
 
-*/ sec styles */
+/* sec styles */
 /* M2LO3 Demonstrate style precedence and inheritance in CSS (CSS, this item should be specified
    2 times, once where precedence is applied and once where inheritance is applied : This is an
    example of style precedence as the articles are usually located in the HTML body this supercedes 
@@ -147,7 +146,7 @@ ol.log_data {
 }
 
 
-*/ List Styles */
+/* List Styles */
 ul {
 
 }
