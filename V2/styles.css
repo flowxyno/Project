@@ -72,16 +72,19 @@ a[href] {
 nav {
     display: table;
     width: 100%;
+    margin-bottom: 3px;
 }
 nav > ul {
     display: table-row;
 }
 nav > ul > li {
     display: table-cell;
-    border-width: 2px;
+    border-bottom: 2px;
+    border-top: 2px;
     border-style: solid;
     border-color: black;
     text-align: center;
+    padding: 10px;
 }
 nav a {
     padding-top: 8px;
