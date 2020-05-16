@@ -11,7 +11,7 @@
      https://rgbcolorcode.com/color/660000
 */
 
-/* •	M3LO8A Demonstrate absolute positioning (CSS, note use in your CSS and describe what its impact is on the HTML): I did not find a place to impliment absolute positioning in my page the demonstrate learning absolute positioning is used to place an object at 
+/* M3LO8A Demonstrate absolute positioning (CSS, note use in your CSS and describe what its impact is on the HTML): I did not find a place to impliment absolute positioning in my page the demonstrate learning absolute positioning is used to place an object at 
 specific coordinates in your page space by asigning a value for the edges. */
 
 /* Structural Styles */
@@ -98,7 +98,7 @@ nav > ul > li {
     text-align: center;
     
 }
-header > nav:a {
+header > nav > a {
     display: block;
     width: 100%;
 }
@@ -128,8 +128,7 @@ article {
     background-color: tan;
     padding-top: 5px;
     padding-bottom: 5px;
-    margin: auto auto
-    width: 60%;
+    width: 100%;
 }
 
 article > h2 {

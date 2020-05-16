@@ -8,6 +8,7 @@
 
 */
 
+/* M3LO1 Demonstrate the use of a CSS reset style sheet (CSS, note where you have CSS reset rules) */
 html, body, article, header, nav, footer {
     display: block;
     margin: 0;
