@@ -1,8 +1,5 @@
 @charset "utf-8";
 
-
-
-
 /*
    CIS 155 - Web Dev 1 - Quarter Project - V1 Style Sheet
    Author: Tracy Harvey
@@ -10,95 +7,106 @@
    
    Filename: styles.css
 
-   M2LO11 Demonstrate a pseudo-classes and a pseudo-element selector (CSS, specify 2 times,
-   show one pseudo-class and one pseudo-element, see 2-18 Using Pseudo-Classes and Pseudo-Elements) : 
-   I did not include an example of using Pseudo-Elements as my page at this point has a small
-   amount of content and I could not identify a place for it that made sense.
-
    Colors that are marked in any kind of rgb or hsl were generated from the site:
      https://rgbcolorcode.com/color/660000
 */
 
+
 /* Structural Styles */
 html {
+    height: 100%;
     background-color: black; 
+    /* M3LO9 Demonstrate fixed, static, or inherited positioning (CSS, note explicit use of one of the three in your CSS and what the impact is on the HTML) : I used fixed positioning on my background image, it eliminates the scrolling effect of the background
+    instead it makes your webpage look like it is scrolling on the background */
+    /* background image courtesy of bestdrumwrap.com */
+    /* M4LO2 Demonstrate the use of background images (CSS) */
+    background-image: url("mahagonyFade.jpg");
+    background-attachment: fixed;
 }
-/* M2LO15 Apply colors using CSS (CSS, see 2-5 Working with Color in CSS) : there are many examples
-   of applying colors using CSS in this document.
-*/
-/* M2LO14 Demonstrate and explain the use of progressive enhancement in CSS (CSS, see 2-6 
-   Employing Progressive Enhancement) : by putting in both an rgb value and and hsl value we insure
-   that older browsers can still display the color as intended as hsl was introduced in CSS3
-*/
+
+header, ul, nav, li, a {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 header {
+    display: block;
     background-color: rgb(102, 0, 0);
     color: rgb(227, 226, 202);
     color: hsl(58, 31%, 84%);
 }
-/* M2LO3 Demonstrate style precedence and inheritance in CSS (CSS, this item should be specified
-   2 times, once where precedence is applied and once where inheritance is applied : This is an
-   example of style inheritance everything that appears in the HTML body will have a set background
-   color and it's text will be black
-*/
-body {
-    background-color: rgb(227, 226, 202);
-    background-color: hsl(58, 31%, 84%);
-    color: black;
-    margin: 10px;
+header > img {
+    /*M3LO2 Demonstrate floating elements (CSS, note where you have specified a floating element and what its impact is): This floats the header image to the left allowing it to display to the left of my navigation menu which is also floated*/
+    display: block;
+    float: left;
+    width: 70%;
+    height: 365px;
 }
-/* M2LO5 Demonstrate contextual selectors (CSS, specify 2 times, showing two different
-   types of contextual selectors as shown in Figure 2-12, Contextual Selectors, of the textbook) : 
-   This is an example of the element selector, it selects the footer element and changes the background 
-   and text color from what the CSS for the body and html elements have listed
-*/   
+/* M3LO3 Demonstrate a clearing floats (CSS, note where you have used a clear and what its impact is): Allows the container which now sees it's self as empty (due to floating all of its contents) to expand to cover the floated content*/ 
+#head::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+body {
+    background-color: tan;
+    color: black;
+    margin: auto auto;
+    min-width: 320px;
+    max-width: 1280px;
+}
+
 footer {
     background-color: rgb(207, 109, 52);
     color: rgb(227, 226, 202);
     color: hsl(58, 31%, 84%);
+    margin-top: 2%;
 }
-/* M2LO7 Demonstrate a CSS attribute selector other than class or id
-   (CSS, specify 1 time, see 2-9b Attribute selectors) : gives the font style Italic to any hypertext 
-   element that contains the href attribute
-*/
+
 a[href] {
     font-style: italic;
 }
 
+
 /* Navigation Styles */
-/* M2LO12 Demonstrate how CSS can change presentation of page elements 
-   (CSS, these are styles that impact page elements rather than impacting text on the page) :
-   Forces the Nav section to display as a table instead of the default, which on chrome was an unordered list
-*/
-nav {
-    display: table;
-    width: 100%;
-    margin-bottom: 3px;
+nav {    
+    float: left;
+    width: 30%;
 }
 nav > ul {
-    display: table-row;
+    list-style-type: none;
+    margin-right: 4%;
+    margin-left: -4%;
+    margin-top: 4%;
+    margin-bottom: 4%;
 }
 nav > ul > li {
-    display: table-cell;
-    border-bottom: 2px;
-    border-top: 2px;
-    border-style: solid;
-    border-color: black;
+    display: block;
+    padding: 10%;
+    width: auto;
+    /* M3LO11 Demonstrate -prefix- style browser extensions use in CSS (CSS note the use in your CSS and what the purpose is): the -webkit is is a rederer for apple safari and google chrome, and the -moz is for firefox. the code gives different browsers the "tools"
+    they need in order to render what we are coding correctly*/
+    /* •	M4LO4 Demonstrate the use of gradients (CSS)*/
+    background: rgb(102,0,0);
+    background: -moz-linear-gradient(left, rgb(102,0,0) 0%, rgb(227,226,202) 50%, rgb(102,0,0) 100%);
+    background: -webkit-linear-gradient(left, rgb(102,0,0) 0%, rgb(227,226,202) 50%, rgb(102,0,0) 100%);
+    background: linear-gradient(to right, rgb(102,0,0) 0%, rgb(227,226,202) 50%, rgb(102,0,0) 100%);
     text-align: center;
-    padding: 10px;
+    
 }
-nav a {
-    padding-top: 8px;
-    padding-bottom: 8px;
+header > nav:a {
+    display: block;
+    width: 100%;
 }
-nav a:link, nav:visited {
+header > nav a:link, nav:visited {
+    display: block;
     color: black;
     text-decoration: none;
 }
-/* M2LO11 Demonstrate a pseudo-classes and a pseudo-element selector (CSS, specify 2 times, show 
-   one pseudo-class and one pseudo-element, see 2-18 Using Pseudo-Classes and Pseudo-Elements) : 
-   Controls the text color and background color of the menu items when the mouse hovers over them
-*/
-nav a:hover, nav a:active {
+
+header > nav a:hover, nav a:active {
     color: rgb(227, 226, 202);
     color: hsl(58, 31%, 84%);
     background-color: rgb(102, 0, 0);
@@ -106,29 +114,76 @@ nav a:hover, nav a:active {
 
 
 /* sec styles */
-/* M2LO3 Demonstrate style precedence and inheritance in CSS (CSS, this item should be specified
-   2 times, once where precedence is applied and once where inheritance is applied : This is an
-   example of style precedence as the articles are usually located in the HTML body this supercedes 
-   the body back ground color with tan 
-*/
-article {
-    background-color: tan;
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 2em;
 }
-/* M2LO5 Demonstrate contextual selectors (CSS, specify 2 times, showing two different 
-   types of contextual selectors as shown in Figure 2-12, Contextual Selectors, of the textbook) :
-   This is an example of the parent > child selector where article is the parent and h1 is the child
-   and the underline will be applied to all h1 elements with in any article
-*/
-article > h1 {
+
+article {
+    display: block;
+    background-color: tan;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: auto auto
+    width: 60%;
+}
+
+article > h2 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+article > p {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#mainArt > img {
+    float: left;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+#imageArt > img {
+    float: left;
+    margin-right: 2%;
+    margin-left: 2%;
+    width: 200px;
+    height: 324px;
+}
+
+#aboutArt > figure > img {
+    display: block;
+    float: left;
+    width: 400px;
+    height: 600px;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+#aboutArt > figure >figure {
+    float: left;
+}
+
+#aboutArt {
+    content: "";
+    display: table;
+    clear: both;
+    margin: 0 auto;
+}
+
+#bs {
+    font-weight: bold;
     text-decoration: underline;
 }
-/* M2LO13 Demonstrate how CSS can change presentation of textual elements (CSS, these are styles 
-   that impact text that is rendered on the page) : This shows the use of CSS to change the type of 
-   font, size and alignment on this webpage
-/* M2LO6  Demonstrate a CSS id and a CSS class selector (CSS, specify 2 times, 
-   show a use of id and a use of class, see 2-9b Attribute selectors) : This shows the use of an id
-   selector in where font family, size, style and alignment are changed from the page default
-*/
+
+#pr {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 #info {
     font-family: Impact, Charcoal, sans-serif;
     font-size: 16px;
@@ -138,15 +193,6 @@ article > h1 {
 #info_welcome {
     text-align: center;
 }
-/* M2LO6  Demonstrate a CSS id and a CSS class selector (CSS, specify 2 times, 
-   show a use of id and a use of class, see 2-9b Attribute selectors) : This shows the use of a class
-   selector in font family, size, and style are changed from the page default
-*/
-ol.log_data {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    font-size: 16px;
-    font-style: normal;
-}
 
 
 /* List Styles */
@@ -154,5 +200,75 @@ ul {
 
 }
 ol {
+    display: block;
+}
+/* M3LO8B Demonstrate relative positioning (CSS, note use in your CSS and describe what its impact is on the HTML) : in this case it moves my orderd list right 2% of the avaliable space alocated to the article section that it is in */
+#mainArt > ol {
+    position: relative;
+    left: 2%;
+}
 
+#aboutArt > ol {
+    position: relative;
+    left: 2%;
+}
+
+ol.log_data {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+}
+
+
+/* Other Styles */
+div.genreTable {
+    border: 2px;
+    width: 167px;
+    border-style: solid;
+    border-color: black;
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+div.genreTableCell {
+    display: inline-block;
+    border: 3px;
+    border-style: solid;
+    border-color: black;
+    
+}
+/* M3LO6 Demonstrate formatting a grid (CSS, note the CSS rules that do this and what their impact is on the HTML; this can be old div-class based grids, or new CSS3 grids)
+the commands in .bookColumn float the column left and set the width to 50% of the avaliable space. commands in the .bookRow clear the float to control container collapse, give 
+the div a border, set the top and bottom margin and width sizes and centers the div by margin*/
+
+.bookColumn {
+    float: left;
+    width: 50%;
+    height: 665px;
+    /* M3LO10 Demonstrate an overflow setting (CSS, note explicit use of an overflow setting in your CSS and what the impact is on the HTML): I used overflow auto, it will put a scroll bar on any displayable content that goes past the containers max height */
+    overflow: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.bookRow {
+    content: "";
+    display: table;
+    clear: both;
+    border-style: outset;
+    border-color: rgb(102, 0, 0);
+    border-width: 5px;
+    margin: 0 auto;
+    /* M4LO5 Demonstrate the use of text or box shadowing (CSS, note one of these two in your CSS and explain its impact on the HTML): I used box shadowing it has the effect of giving the html document some depth like a light is shining on it from above at an angle. */
+    -webkit-box-shadow: 9px 9px 13px 5px rgba(0,0,0,0.87);
+    box-shadow: 9px 9px 13px 5px rgba(0, 0, 0, 0.87);
+    /* M4LO3 Demonstrate the use of rounded corners for borders (CSS) */
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    width: 90%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
