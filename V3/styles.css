@@ -291,6 +291,7 @@ div.genreTableCell {
     }
 
     div.bookRow 
-        text-align: center;
         flex-direction: column;
+        flex-wrap: nowrap;
+
 }
