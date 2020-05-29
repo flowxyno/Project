@@ -290,8 +290,9 @@ div.genreTableCell {
         order: 5;
     }
 
-    div.bookRow 
+    div.bookRow (
+        width: 100%;
         flex-direction: column;
-        flex-wrap: wrap;
+    )
 
 }
