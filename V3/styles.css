@@ -1,9 +1,9 @@
 @charset "utf-8";
 
 /*
-   CIS 155 - Web Dev 1 - Quarter Project - V2 Style Sheet
+   CIS 155 - Web Dev 1 - Quarter Project - V3 Style Sheet
    Author: Tracy Harvey
-   Date:  05/15/20
+   Date:  05/29/20
    
    Filename: styles.css
 
@@ -53,8 +53,6 @@ header > img {
 }
 
 body {
-    display: flex;
-    flex-wrap: wrap;
     background-color: tan;
     color: black;
     margin: auto auto;
@@ -96,7 +94,7 @@ nav > ul > li {
     background: rgb(102,0,0);
     background: -moz-linear-gradient(left, rgb(102,0,0) 0%, rgb(227,226,202) 50%, rgb(102,0,0) 100%);
     background: -webkit-linear-gradient(left, rgb(102,0,0) 0%, rgb(227,226,202) 50%, rgb(102,0,0) 100%);
-    background: linear-gradient(to right, rgb(102,0,0) 0%, rgb(227,226,202) 50%, rgb(102,0,0) 100%);
+    background: linear-gradient(to right, rgb(102,0,0) 0%, tan 50%, rgb(102,0,0) 100%);
     text-align: center;
     
 }
@@ -226,6 +224,43 @@ ol.log_data {
     font-style: normal;
 }
 
+/* Table Styles */
+
+/* M6LO7 Demonstrate how to format a table with CSS (CSS): The CSS commands given here control border and font sizes, background, font, and border colors and column width */
+table {
+    background: linear-gradient(to bottom, rgb(102,0,0), black);
+    border: 3px solid gray;
+}
+
+table > caption {
+    font-size: 1.5em;
+}
+  
+th, td {
+    border: 3px solid gray;
+    line-height: 1.5em;
+    padding: 8px;
+}
+  
+th {
+    background: black;
+    color: whitesmoke;
+    font-weight: normal;
+}
+  
+td {
+    color: tan;
+    font-size: 1em;
+    vertical-align: top;
+}
+
+col#firstCol {
+    width: 24%;
+  }
+  
+  col.dataCols {
+    width: 19%;
+  }
 
 /* Other Styles */
 div.genreTable {
@@ -261,7 +296,7 @@ div.genreTableCell {
     content: "";
     /* M5LO5 Demonstrate the use of flexboxes on a web page (CSS document where you use flexboxes; explain their impact on the page's layout): Flex box used on the book review sections to replace the old table display */
     display: flex;
-    /* •	M5LO7 Demonstrate use of properties of flexbox containers (CSS, document what flexbox container properties you use and their impacts, for one CSS selector using them): The wrap allows me to keep the two colmn format that I want while using a flex box */
+    /* M5LO7 Demonstrate use of properties of flexbox containers (CSS, document what flexbox container properties you use and their impacts, for one CSS selector using them): The wrap allows me to keep the two colmn format that I want while using a flex box */
     flex-wrap: wrap;
     clear: both;
     border-style: outset;
@@ -281,21 +316,11 @@ div.genreTableCell {
 }
 
 /* MOBILE DEVICE STYLES */
-/*
 @media only screen and <max-width: 480px) {
-    #himg {
-        width: 100%;
-        order: 1;
-    }
-    
-    nav.main {
-        order: 5;
-    }
-
+/* •	M5LO3 Use media queries to format a page differently for phones vs. PCs. (CSS, note where these are in your CSS and describe the overall impact they have on the site): You use media queries to adapt elements to fit properly in the brower and change the users experience */
     div.bookRow (
+        text-align: center;
         width: 100%;
         flex-direction: column;
     )
-
 }
-*/
