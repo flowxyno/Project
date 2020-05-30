@@ -254,11 +254,11 @@ td {
     vertical-align: top;
 }
 
-col#firstCol {
+col#fstColumn {
     width: 24%;
   }
   
-  col.dataCols {
+  col.infoColumns {
     width: 19%;
   }
 
@@ -318,9 +318,9 @@ div.genreTableCell {
 /* MOBILE DEVICE STYLES */
 @media only screen and (max-width: 480px) {
 /* •	M5LO3 Use media queries to format a page differently for phones vs. PCs. (CSS, note where these are in your CSS and describe the overall impact they have on the site): You use media queries to adapt elements to fit properly in the brower and change the users experience */
-    div.bookRow (
+    div.bookRow {
         text-align: center;
         width: 100%;
         flex-direction: column;
-    )
+    }
 }
