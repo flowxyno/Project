@@ -43,7 +43,7 @@ header > img {
     display: flex;
     float: left;
     width: 70%;
-    height: 365px;
+    height: 100%;
 }
 /* M3LO3 Demonstrate a clearing floats (CSS, note where you have used a clear and what its impact is): Allows the container which now sees it's self as empty (due to floating all of its contents) to expand to cover the floated content*/ 
 #head::after {
@@ -64,7 +64,7 @@ footer {
     background-color: rgb(207, 109, 52);
     color: rgb(227, 226, 202);
     color: hsl(58, 31%, 84%);
-    margin-top: 2%;
+    margin-top: 1%;
 }
 
 a[href] {
@@ -141,10 +141,12 @@ article > p {
     margin-right: 2%;
 }
 
-#mainArt > img {
+/*•	M8LO12 Demonstrate how to format media with CSS: As I only have video in one place this CSS denotes placement and display of the embedded video player realative to the rest of the article */
+#mainArt > video {
     float: left;
+    display: block;
     /* M4LO6 Demonstrate the use of opacity/transparency for images (see 4.2) (CSS) */
-    opacity: 0.7;
+    /*opacity: 0.7;*/
     margin-right: 2%;
     margin-left: 2%;
 }
@@ -312,8 +314,63 @@ div.genreTableCell {
     border-radius: 9px;
     width: 90%;
     margin-top: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
 }
+
+.bookSub {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.bookSubInt {
+    content: "";
+    display: flex;
+    justify-content: center;
+    border-style: outset;
+    border-color: rgb(102, 0, 0);
+    border-width: 5px;
+    margin: 0 auto;
+    -webkit-box-shadow: 9px 9px 13px 5px rgba(0,0,0,0.87);
+    box-shadow: 9px 9px 13px 5px rgba(0, 0, 0, 0.87);
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    width: 90%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+/* FORM STYLES */
+/* M7LO11 Demonstrate how to format a form with CSS: this controls the spacing and location of text and boxes with in the form */
+label {
+    display: block;
+    float: left;
+    clear: left;
+    margin-left: 2%;
+    padding-bottom: 1%;
+    width: 12%;
+ }
+ 
+ input, select, textarea {
+    display: block;
+    float: left;
+    margin: 5px 0px;
+    width: 18%;
+ }
+ 
+ textarea {
+    height: 100px;
+ }
+ 
+ form p {
+    clear: left;
+    text-align: left;
+    padding-top: 2%;
+    padding-left: 2%;
+ }
 
 /* MOBILE DEVICE STYLES */
 @media only screen and (max-width: 480px) {
