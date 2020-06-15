@@ -264,7 +264,7 @@ col#fstColumn {
     width: 19%;
   }
 
-/* Other Styles */
+/* Table and Div Styles */
 div.genreTable {
     border: 2px;
     width: 167px;
@@ -343,6 +343,17 @@ div.genreTableCell {
     margin-bottom: 2%;
 }
 
+.submitButton {
+    background-color: tan;
+    color: black;
+    position: relative;
+    animation-name: moveButton;
+    animation-duration: 5s;
+    animation-delay: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
 /* FORM STYLES */
 /* M7LO11 Demonstrate how to format a form with CSS: this controls the spacing and location of text and boxes with in the form */
 label {
@@ -371,6 +382,12 @@ label {
     padding-top: 2%;
     padding-left: 2%;
  }
+
+ /* ANIMATION STYLES */
+@keyframes moveButton {
+    from {left: 0px;}
+    to {left: 50px; background-color: rgb(102, 0, 0); color: tan;}
+}
 
 /* MOBILE DEVICE STYLES */
 @media only screen and (max-width: 480px) {
