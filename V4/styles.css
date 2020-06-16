@@ -347,6 +347,7 @@ div.genreTableCell {
     background-color: tan;
     color: black;
     position: relative;
+    /* M8LO10 Demonstrate a CSS animation or transition: this moves the submit button to the right from its start point and replaces the default background and text color */
     animation-name: moveButton;
     animation-duration: 5s;
     animation-delay: 3s;
@@ -384,6 +385,7 @@ label {
  }
 
  /* ANIMATION STYLES */
+/* M8LO10 Demonstrate a CSS animation or transition: this moves the submit button to the right from its start point and replaces the default background and text color */
 @keyframes moveButton {
     from {left: 0px;}
     to {left: 50px; background-color: rgb(102, 0, 0); color: tan;}
